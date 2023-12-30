@@ -4,7 +4,8 @@ const About = () => {
   return (
     <div className="container mx-auto">
       <div className="mt-20">
-        <h3 className="text-secondary text-center text-4xl">Who Am I</h3>
+  
+        <h3 class="text-secondary text-4xl text-center ">&lt; Who Am I /&gt;</h3>
         <h1 className="md:text-5xl text-4xl font-bold md:w-2/3 w-full p-0 mx-auto text-white mt-5 text-center">
           {" "}
           A Passionate Developer Who Loves to Code
@@ -21,7 +22,7 @@ const About = () => {
           <div class="md:w-1/2 md:text-start">
             <h1 class="text-5xl w-full mx-auto text-white mb-5">About Me</h1>
             <div>
-              <p class="text-xl leading-relaxed">
+              <p class="text-xl leading-relaxed text-justify">
                 Hello! My name is Md Muntasir Mamun, From Chattogram,
                 Bangladesh. I am a MERN Stack web developer specializing in
                 building React.js WebApp. I enjoy creating things that live on

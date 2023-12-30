@@ -16,7 +16,7 @@ const Banner = () => {
                                 </a>
                                 </button>
                             </div>
-                            <div className='md:w-96 md:h-96 w-full relative h-full rounded'>
+                            <div className='md:w-[600px] md:h-[400px] w-full relative h-full rounded'>
                                 <img src="https://i.ibb.co/1q4LMpQ/Whats-App-Image-2023-12-29-at-18-18-35-8757989a-removebg-preview.png" alt="MD Muntasir Mamun" className='rounded-full w-full h-full' />
                             </div>
                         </div>
