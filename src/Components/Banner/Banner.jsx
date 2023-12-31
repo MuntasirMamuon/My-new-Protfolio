@@ -10,7 +10,7 @@ const Banner = () => {
                             <div className='md:w-1/2 w-full text-center md:text-start'>
                                 <h1 className="text-7xl text-white font-bold">Md <span className='text-secondary'>  Muntasir Mamun</span></h1>
                                 <p className='text-3xl font-bold mt-5'><span className='text-secondary text-4xl'>Mern </span> stack Junior Web Developer</p>
-                                <button className='group relative h-12 w-48 bg-white overflow-hidden rounded-lg text-lg font-bold shadow mt-5 px-1'><a href="">
+                                <button className='group relative h-12 w-48 bg-white overflow-hidden rounded-lg text-lg font-bold shadow mt-5 px-1'><a href="https://drive.google.com/file/d/1Lshttzzrm8jXOLKosYWjqcoXJLQC6VRa/view?usp=sharing">
                                     <div className='absolute inset-0 w-1 bg-secondary transition-all duration-[250ms] ease-out group-hover:w-full'> </div>
                                     <span className='relative text-primary group-hover:text-white'>See Resume</span>
                                 </a>
