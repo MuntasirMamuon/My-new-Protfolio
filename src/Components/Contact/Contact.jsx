@@ -2,7 +2,7 @@ import React from 'react';
 
 const Contact = () => {
     return (
-        <div className='md:mt-20 mt-32 w-full'>
+        <div className='md:mt-20 mt-32 w-full md:h-[100vh]'>
             <h3 class="text-secondary text-4xl text-center ">&lt; Contact /&gt;</h3>
             <h1 class="md:text-5xl text-4xl font-bold md:w-2/3 w-full p-0 mx-auto text-white mt-5 text-center">I Want to Hear from You</h1>
             <div className='relative flex items-start justify-center sm:items-center mt-10'>
@@ -41,6 +41,14 @@ const Contact = () => {
                 </div>
 
             </div>
+            <div className='container mx-auto'>
+            <div class="mt-20">
+                <hr class="border-secondary"/>
+            <div>
+            <h1 class="mt-5 text-white text-lg text-center  py-6">© All rights reserved and created by <span class="text-2xl font-bold text-secondary">Md Muntasir Mamun 2024</span></h1>
+            </div>
+            </div>
+        </div>
         </div>
     );
 };

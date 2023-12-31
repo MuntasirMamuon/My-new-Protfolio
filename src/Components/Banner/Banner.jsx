@@ -8,7 +8,7 @@ const Banner = () => {
                     <div>
                         <div className='flex flex-col-reverse md:flex-row md:justify-between justify-center gap-10 items-center my-24'>
                             <div className='md:w-1/2 w-full text-center md:text-start'>
-                                <h1 className="text-7xl text-white font-bold">Md Muntasir <span className='text-secondary'> Mamun</span></h1>
+                                <h1 className="text-7xl text-white font-bold">Md <span className='text-secondary'>  Muntasir Mamun</span></h1>
                                 <p className='text-3xl font-bold mt-5'><span className='text-secondary text-4xl'>Mern </span> stack Junior Web Developer</p>
                                 <button className='group relative h-12 w-48 bg-white overflow-hidden rounded-lg text-lg font-bold shadow mt-5 px-1'><a href="">
                                     <div className='absolute inset-0 w-1 bg-secondary transition-all duration-[250ms] ease-out group-hover:w-full'> </div>

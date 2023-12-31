@@ -66,7 +66,7 @@
         "ProjectsImage":"https://i.ibb.co/Bt3z60g/bistro-boss.png",
         "ProjectsLiveLink":"https://bistro-boss-c4239.web.app/",
         "ProjectsGithubLink":"https://github.com/MuntasirMamuon/Bistro-Boss-Client",
-        "ProjectsGithubServerLink":"https://github.com/MuntasirMamuon/Bistro-Boss-Server"
+        "ProjectsGithubServer":"https://github.com/MuntasirMamuon/Bistro-Boss-Server"
 
     },
     {
@@ -97,7 +97,7 @@
         "ProjectsTailwind":"Tailwind CSS",
         "ProjectsImage":"https://i.ibb.co/WgSD4sF/board-games.png",
         "ProjectsLiveLink":" https://board-games-686cb.web.app/",
-        "ProjectsGithubLink":"https://github.com/MuntasirMamuon/toy-shop-server"
+        "ProjectsGithubServer":"https://github.com/MuntasirMamuon/toy-shop-server"
 
     },
     {

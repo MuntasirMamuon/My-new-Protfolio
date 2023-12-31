@@ -92,7 +92,9 @@ fieldset {
 legend {
   padding: 0
 }
-
+ul.open{
+  display: flex;
+}
 ol,ul,menu {
   list-style: none;
   margin: 0;
@@ -1541,7 +1543,8 @@ code {
 }
 
 .bg-animation {
-  transition: background-position 5s ease-out
+  transition: background-position 5s ease-out;
+  background-size: 100% 200%;
 }
 
 .bg-animation:hover {

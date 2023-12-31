@@ -2,7 +2,7 @@ import React from 'react';
 
 const Skills = () => {
     return (
-        <div className='container mx-auto mt-32'>
+        <div className='container mx-auto md:mt-32 md:h-[100vh]'>
          <div className='md:mt-20 w-full'>
             <h3 class="text-secondary text-center text-4xl ">&lt; Skills /&gt;</h3>
              <h1 class="md:text-5xl text-4xl text-center font-bold md:w-2/3 w-full p-0 mx-auto text-white mt-5">My skills progress so far</h1>

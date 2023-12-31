@@ -6,7 +6,7 @@ const Projects = () => {
  const [data,setData]=useState([])
 
  useEffect(()=>{
-    fetch("../../../public/Projects.json")
+    fetch("./Projects.json")
     .then(res=>res.json())
     .then(data=>setData(data))
  },[])
@@ -14,7 +14,7 @@ const Projects = () => {
 
 
     return (
-        <div className='w-full mt-32'>
+        <div className='w-full '>
             <h3 class="text-secondary text-4xl text-center ">&lt; Projects /&gt;</h3>
             <h1 class="md:text-5xl text-4xl font-bold md:w-2/3 w-full p-0 mx-auto text-white mt-5 text-center mb-5">What I Did for my client</h1>
             <div class="flex flex-row flex-wrap justify-between items-center gap-5">
@@ -52,11 +52,14 @@ const Projects = () => {
                                 </div>
                             </div>
                         </div>
-                         <div class="w-full h-52 mt-5 overflow-hidden hover:overflow-hidden rounded-lg bg-white">
-                            <div >
-                                <img class="w-full h-full bg-cover bg-no-repeat bg-animation" src={dt.ProjectsImage} alt="" />
-                        </div>
-                    </div>
+                        <div className="w-full h-52 mt-5 overflow-hidden rounded-lg bg-white hover:bg-animation ">
+    <div
+        className="w-full h-full bg-cover bg-no-repeat bg-animation"
+        style={{ backgroundImage: `url('${dt.ProjectsImage}')` }}
+    >
+       
+    </div>
+</div>
                         
                      <div class="flex flex-wrap flex-row items-center md:justify-center justify-center w-full">
                         <button class="group relative h-10 w-24 overflow-hidden rounded-lg  bg-white shadow mt-5 px-1 mx-1">
@@ -67,12 +70,23 @@ const Projects = () => {
                             </Link>
                         </button>
                         <button class="group relative h-10 w-24 overflow-hidden rounded-lg  bg-white shadow mt-5 px-1 mx-1">
-                            <a href="https://github.com/MuntasirMamuon/Digitalmedia-website" target="_blank" rel="noreferrer">
+                            <Link to={dt.ProjectsGithubLink} target="_blank" rel="noreferrer">
                                 <div class="absolute inset-0 w-1 bg-secondary transition-all duration-[250ms] ease-out group-hover:w-full">
                              </div>
                              <span class="relative text-xs font-bold text-primary group-hover:text-white">Client Code</span>
-                            </a>
+                            </Link>
                         </button>
+                        {
+                            dt.ProjectsGithubServer&&(<>
+                            <button class="group relative h-10 w-24 overflow-hidden rounded-lg  bg-white shadow mt-5 px-1 mx-1">
+                            <Link to={dt.ProjectsGithubServer} target="_blank" rel="noreferrer">
+                                <div class="absolute inset-0 w-1 bg-secondary transition-all duration-[250ms] ease-out group-hover:w-full">
+                             </div>
+                             <span class="relative text-xs font-bold text-primary group-hover:text-white">Server Code</span>
+                            </Link>
+                        </button>
+                            </>)
+                        }
                     </div>
     </div>
   ))}
