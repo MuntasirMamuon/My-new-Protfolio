@@ -4,13 +4,40 @@ import { Link } from 'react-router-dom';
 const Projects = () => {
 
  const [data,setData]=useState([])
+ const[all,setAll]=useState(false)
+ const [fullStacks,setFullStacks]=useState([])
+ const [frontEnd,setFrontEnd]=useState([])
 
- useEffect(()=>{
+console.log("dta");
+useEffect(()=>{
     fetch("./Projects.json")
     .then(res=>res.json())
-    .then(data=>setData(data))
+    .then(data=>{
+        setData(data)
+        
+            const fullStack = data.filter((item) => item.ProjectsCategory === "fullStack");
+            setFullStacks(fullStack)
+            const frontEnd = data.filter((item) => item.ProjectsCategory === "frontend");
+            setFrontEnd(frontEnd)
+        
+    })
  },[])
 
+ 
+ const handleAll=()=>{
+    
+   
+ setAll(true)
+ 
+ 
+   
+ }
+ const handleFullStack=()=>{
+    setData(fullStacks)
+ }
+ const handleFrontEnd=()=>{
+    setData(frontEnd)
+ }
 
 
     return (
@@ -20,9 +47,9 @@ const Projects = () => {
             <div class="flex flex-row flex-wrap justify-between items-center gap-5">
                 <ul class="flex flex-row gap-5 flex-wrap justify-center mx-auto">
                     <li className=''>
-                        <button class="border border-secondary rounded-lg text-secondary py-2 px-5 hover:text-white hover:bg-secondary font-bold ml-5 my-5">All</button>
-                        <button class="border border-secondary rounded-lg text-secondary py-2 px-5 hover:text-white hover:bg-secondary font-bold ml-5 my-5">Frotend</button>
-                        <button class="border border-secondary rounded-lg text-secondary py-2 px-5 hover:text-white hover:bg-secondary font-bold ml-5 my-5">FullStack</button>
+                        {/* <button onClick={()=>handleAll(data)}  class="border border-secondary rounded-lg text-secondary py-2 px-5 hover:text-white hover:bg-secondary font-bold ml-5 my-5">All</button> */}
+                        <button onClick={()=>handleFrontEnd()} class="border border-secondary rounded-lg text-secondary py-2 px-5 hover:text-white hover:bg-secondary font-bold ml-5 my-5">Frotend</button>
+                        <button onClick={()=>handleFullStack()}   class="border border-secondary rounded-lg text-secondary py-2 px-5 hover:text-white hover:bg-secondary font-bold ml-5 my-5">FullStack</button>
                     </li>
                 </ul>
             </div>
@@ -33,7 +60,7 @@ const Projects = () => {
       {/* Your content goes here */}
       <div class="mt-3">
                         <h3 class="text-3xl font-bold text-white border-white px-3 rounded-3xl">{dt.ProjectsName}</h3>
-                         <h3 class="text-xl font-bold text-secondary border-white px-3 rounded-3xl">(frontend)</h3>
+                         <h3 class="text-xl font-bold text-secondary border-white px-3 rounded-3xl">({dt.ProjectsCategory})</h3>
                           <div class="mt-3 flex flex-wrap justify-center items-center text-start h-24">
                             <div class="bg-primary p-3 rounded-lg">
                                {dt.ProjectsHTML&& <div class="badge text-secondary badge-sm p-2 mx-1 rounded-md">{dt.ProjectsHTML}</div>}
